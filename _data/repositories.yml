@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - 1zumiSagiri
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - 1zumiSagiri/Pirouette-Compiler
+  - 1zumiSagiri/redis_rs
+  - 1zumiSagiri/webserver_rs
+  - 1zumiSagiri/ub_cse331_recitations
