@@ -127,10 +127,10 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Vincent's blog # blog_name will be displayed in your blog page
-blog_description: will update it soon ^_^
+blog_name: A blog # blog_name will be displayed in your blog page
+blog_description: ^_^
 permalink: /blog/:year/:title/
-lsi: true # produce an index for related posts
+lsi: false # produce an index for related posts
 
 # Pagination
 pagination:
@@ -179,6 +179,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  teaching:
+    outputs: true
+    permalink: /teaching/:path/
 
 announcements:
   enabled: false
@@ -285,8 +288,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["images", "math", "code"] # these tags will be displayed on the front page of your blog
-display_categories: ["programming"] # these categories will be displayed on the front page of your blog
+#display_tags: ["math", "code"] # these tags will be displayed on the front page of your blog
+#display_categories: ["programming"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
