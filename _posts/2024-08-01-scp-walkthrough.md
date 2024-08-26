@@ -10,9 +10,9 @@ Feel free to come to office hours if you're new to using command line!
 
 ## 0 - Make sure you connect to a UB network
 
-CSE department server `emon.cse.buffalo.edu` is accessible only from the UB campus. Go to next section if you are on campus or living in dorms.
+CSE department server `turing.cse.buffalo.edu` is accessible only from the UB campus. Go to next section if you are on campus or living in dorms.
 
-If you are off campus, you will need to use the [UB VPN](https://www.buffalo.edu/ubit/service-guides/connecting/vpn/computer.html).
+If you are off campus, you will need to use the [UB VPN](https://www.buffalo.edu/ubit/service-guides/connecting/vpn/computer.html). You can also use `cerf.cse.buffalo.edu`. If you are using `cerf`, replace `turing` with `cerf` in the following commands.
 
 ## 1 - Open a terminal
 
@@ -40,8 +40,8 @@ Check out the [link](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_te
 To transfer files to the remote server, use command `scp`. For example, my UBIT name is `vc331` and I want to transfer the folder `HW0C++` to the remote server. The command would look like this:
 
 ```Markdown
-vincent@local_machine 331 % scp -r HW0C++ vc331@emon.cse.buffalo.edu:~
-vc331@emon.cse.buffalo.edu's password:
+vincent@local_machine 331 % scp -r HW0C++ vc331@turing.cse.buffalo.edu:~
+vc331@turing.cse.buffalo.edu's password:
 Solution.cpp                   100%  884    37.6KB/s   00:00
 input5.txt                     100%   25KB 555.2KB/s   00:00
 input1.txt                     100%  250    10.9KB/s   00:00
@@ -59,20 +59,20 @@ Terminal will prompt you to enter your password, you won't see the password as y
 
 ## 4 - SSH into the remote server
 
-Now you can login to the server using command `ssh`. It is better to keep your current terminal tab open for file transfer and open an additional tab for `ssh` and test your implementation on the `emon` server. For example, my UBIT name is `vc331`, the command would look like this:
+Now you can login to the server using command `ssh`. It is better to keep your current terminal tab open for file transfer and open an additional tab for `ssh` and test your implementation on the `turing` server. For example, my UBIT name is `vc331`, the command would look like this:
 
 ```Markdown
-vincent@local_machine 331 % ssh vc331@emon.cse.buffalo.edu
-vc331@emon.cse.buffalo.edu's password:
-vc331@emon:~$
+vincent@local_machine 331 % ssh vc331@turing.cse.buffalo.edu
+vc331@turing.cse.buffalo.edu's password:
+vc331@turing:~$
 ```
 
 To check if the files have been successfully transferred, use command `ls` to list the folders and files in the current directory. You should see the folder `HW0C++` in the list:
 
 ```Markdown
-vc331@emon:~$ ls
+vc331@turing:~$ ls
 HW0C++ HW0Java HW0Python
-vc331@emon:~$
+vc331@turing:~$
 ```
 
 ## 5 - Compile and run your code
@@ -84,9 +84,9 @@ To run your code, navigate to the directory where your code is located and compi
 {% tab lang C++ %}
 
 ```bash
-vc331@emon:~$ cd HW0C++
-vc331@emon:~/HW0C++$ g++ -std=c++11 Driver.cpp
-vc331@emon:~/HW0C++$ ./a.out testcases/input1.txt
+vc331@turing:~$ cd HW0C++
+vc331@turing:~/HW0C++$ g++ -std=c++11 Driver.cpp
+vc331@turing:~/HW0C++$ ./a.out testcases/input1.txt
 ```
 
 {% endtab %}
@@ -94,9 +94,9 @@ vc331@emon:~/HW0C++$ ./a.out testcases/input1.txt
 {% tab lang Java %}
 
 ```bash
-vc331@emon:~$ cd HW0Java
-vc331@emon:~/HW0Java$ javac src/ub/cse/algo/*.java
-vc331@emon:~/HW0Java$ java -cp "src" ub.cse.algo.Driver testcases/input1.txt
+vc331@turing:~$ cd HW0Java
+vc331@turing:~/HW0Java$ javac src/ub/cse/algo/*.java
+vc331@turing:~/HW0Java$ java -cp "src" ub.cse.algo.Driver testcases/input1.txt
 ```
 
 {% endtab %}
@@ -104,8 +104,8 @@ vc331@emon:~/HW0Java$ java -cp "src" ub.cse.algo.Driver testcases/input1.txt
 {% tab lang Python %}
 
 ```bash
-vc331@emon:~$ cd HW0Python
-vc331@emon:~/HW0Python$ python Driver.py testcases/input1.txt
+vc331@turing:~$ cd HW0Python
+vc331@turing:~/HW0Python$ python Driver.py testcases/input1.txt
 ```
 
 {% endtab %}
