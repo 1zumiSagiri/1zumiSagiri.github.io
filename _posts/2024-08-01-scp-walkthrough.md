@@ -22,7 +22,7 @@ For Windows users, you may want to use [PowerShell](https://learn.microsoft.com/
 
 ## 2 - Locate the directory where your template files are
 
-Once you have downloaded the template files, use command `cd` to navigate to the parent directory of the folder where the template codes are located. For example, if the files are located in the directory `HW0C++`, it would look like this:
+Once you have downloaded the template files, use command `cd` to navigate to the parent directory of the folder where the template codes are located, and use command `ls` to check if the current directory contains your folder. For example, if the files are located in the folder `HW0C++`, it would look like this:
 
 ```Markdown
 vincent@local_machine ~ % cd Downloads/331
