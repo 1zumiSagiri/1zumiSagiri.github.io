@@ -8,9 +8,9 @@ tabs: true
 
 Whenever you have a personal VPS or a corporate server that allows public access, if you open the SSH password login authentication method on port 22, you will be vulnerable to brute-force attacks. You can use [fail2ban](https://github.com/fail2ban/fail2ban) or [sshguard](https://www.sshguard.net/) to protect your server from these attacks or change the default port to a non-standard port. However, the relatively safe and simple way to protect your server is to disable password authentication and use public key authentication instead.
 
-Suppose we configure SSH to connect from computer A to server B using public key authentication.
+> When you attempt to connect to server B from computer A, the server generates a session-based random challenge and sends it to computer A. Computer A uses its private key to sign the challenge and returns the signed result to the server. The server then verifies the signature using the corresponding public key stored on the server. If the verification succeeds, it confirms that computer A possesses the private key matching the public key, thereby authenticating the client. The server then allows the connection and establishes a secure communication session. Throughout this process, the private key remains securely stored on the client, and all communication is encrypted to prevent interception or tampering.
 
-When you attempt to connect to server B from computer A, the server generates a session-based random challenge and sends it to computer A. Computer A uses its private key to sign the challenge and returns the signed result to the server. The server then verifies the signature using the corresponding public key stored on the server. If the verification succeeds, it confirms that computer A possesses the private key matching the public key, thereby authenticating the client. The server then allows the connection and establishes a secure communication session. Throughout this process, the private key remains securely stored on the client, and all communication is encrypted to prevent interception or tampering.
+Suppose we want to configure SSH to connect from computer A to server B using public key authentication.
 
 ## 1 - Generate SSH key pair on computer A
 
@@ -26,7 +26,7 @@ Use [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) algorithm by repla
 
 ## 2 - Copy the public key of computer A to server B
 
-Use the following command to get your public key:
+On computer A, use the following command to get your public key:
 
 ```bash
 cat ~/.ssh/id_ed25519.pub
