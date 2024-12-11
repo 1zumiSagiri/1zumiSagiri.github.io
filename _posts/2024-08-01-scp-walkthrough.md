@@ -2,7 +2,7 @@
 layout: post
 title: Moving files to remote server using SCP
 date: 2024-08-01 15:00:00
-description: this is what included pseudo code could look like
+description:
 tabs: true
 ---
 
